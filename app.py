@@ -29,3 +29,4 @@ if st.button("Send via n8n"):
                 st.error(f"Request failed: {e}")
 
 st.info("Configure your N8N_WEBHOOK_URL in Streamlit Secrets.")
+
