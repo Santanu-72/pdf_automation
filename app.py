@@ -3,7 +3,7 @@ import requests
 
 st.title("PDF Upload → Email Sender")
 
-# DIRECT WEBHOOK URL HERE (NO SECRETS NEEDED)
+# ✅ USE YOUR PRODUCTION N8N WEBHOOK URL HERE
 WEBHOOK_URL = "http://localhost:5678/webhook/send-pdf-email"
 
 email = st.text_input("Enter your Email")
@@ -27,3 +27,4 @@ if st.button("Send Email"):
             st.success(f"Response: {response.text}")
         except Exception as e:
             st.error(f"Error: {e}")
+
