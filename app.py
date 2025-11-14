@@ -4,7 +4,7 @@ import requests
 st.title("PDF → Email via n8n")
 
 # Replace with your n8n webhook URL
-WEBHOOK_URL = st.secrets.get("N8N_WEBHOOK_URL", "https://REPLACE_WITH_WEBHOOK")
+WEBHOOK_URL = "http://localhost:5678/webhook/send-pdf-email"
 
 pdf_file = st.file_uploader("Upload PDF", type=["pdf"])
 to_email = st.text_input("Recipient Email")
@@ -29,4 +29,5 @@ if st.button("Send via n8n"):
                 st.error(f"Request failed: {e}")
 
 st.info("Configure your N8N_WEBHOOK_URL in Streamlit Secrets.")
+
 
